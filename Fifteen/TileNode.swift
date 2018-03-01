@@ -20,6 +20,7 @@ class TileNode : SKShapeNode {
         self.fillColor = .yellow
 
         let label = SKLabelNode(text: String(number))
+        label.fontName = "ArialRoundedMTBold"
         label.fontColor = .blue
         label.fontSize = 18
         label.verticalAlignmentMode = .center
@@ -43,14 +44,14 @@ class TileNode : SKShapeNode {
         if self.position.x == parent.currentEmptyPosition.x {
             //move down
             if self.position.y == parent.currentEmptyPosition.y + 25 {
-                let move = SKAction.move(to: parent.currentEmptyPosition, duration: 0.3)
+                let move = SKAction.move(to: parent.currentEmptyPosition, duration: 0.1)
                 self.run(move, completion: {() in
                     self.position = parent.currentEmptyPosition
                     parent.currentEmptyPosition.y += 25
                     parent.moves += 1 })
             //move up
             } else if self.position.y == parent.currentEmptyPosition.y - 25 {
-                let move = SKAction.move(to: parent.currentEmptyPosition, duration: 0.3)
+                let move = SKAction.move(to: parent.currentEmptyPosition, duration: 0.1)
                 self.run(move, completion: {() in
                     self.position = parent.currentEmptyPosition
                     parent.currentEmptyPosition.y -= 25
@@ -59,14 +60,14 @@ class TileNode : SKShapeNode {
         } else if self.position.y == parent.currentEmptyPosition.y {
             //move left
             if self.position.x == parent.currentEmptyPosition.x + 25 {
-                let move = SKAction.move(to: parent.currentEmptyPosition, duration: 0.3)
+                let move = SKAction.move(to: parent.currentEmptyPosition, duration: 0.1)
                 self.run(move, completion: {() in
                     self.position = parent.currentEmptyPosition
                     parent.currentEmptyPosition.x += 25
                     parent.moves += 1 })
             //move right
             } else if self.position.x == parent.currentEmptyPosition.x - 25 {
-                let move = SKAction.move(to: parent.currentEmptyPosition, duration: 0.3)
+                let move = SKAction.move(to: parent.currentEmptyPosition, duration: 0.1)
                 self.run(move, completion: {() in
                     self.position = parent.currentEmptyPosition
                     parent.currentEmptyPosition.x -= 25

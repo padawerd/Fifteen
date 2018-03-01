@@ -9,27 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Fifteen/TileNode.swift"
-            timestampString = "541544465.7947839"
+            filePath = "Fifteen/GameScene.swift"
+            timestampString = "541573850.513584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Fifteen/TileNode.swift"
-            timestampString = "541542870.302528"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "touchesEnded(_:with:)"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "finishGameIfDone()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -39,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Fifteen/TileNode.swift"
-            timestampString = "541544465.7947839"
+            filePath = "Fifteen/GameScene.swift"
+            timestampString = "541573850.513584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "moveIfPossible()"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "finishGameIfDone()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -55,13 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Fifteen/TileNode.swift"
-            timestampString = "541546535.662518"
+            filePath = "Fifteen/GameScene.swift"
+            timestampString = "541574163.9554141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "moveIfPossible()"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "shuffleTilesAndAddToScene()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -72,12 +58,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fifteen/GameScene.swift"
-            timestampString = "541546549.1972589"
+            timestampString = "541574522.69517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "updateTimeLabel()"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "updateScoreLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fifteen/GameScene.swift"
+            timestampString = "541575037.602434"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "shuffleTilesAndAddToScene()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

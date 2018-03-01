@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Skillz
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, SkillzDelegate {
 
     var window: UIWindow?
 
 
+    //game id: 4651
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        //change with: to SkillzProduction when done
+        Skillz.skillzInstance().initWithGameId("4651", for: self, with: SkillzEnvironment.sandbox, allowExit: false)
         window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = ViewController()
         viewController.view.backgroundColor = UIColor.white
@@ -24,6 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Override point for customization after application launch.
         return true
+    }
+
+    func preferredSkillzInterfaceOrientation() -> SkillzOrientation {
+        return SkillzOrientation.portrait
+    }
+
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return .portrait
+    }
+
+    func tournamentWillBegin(_ gameParameters: [AnyHashable : Any]!, with matchInfo: SKZMatchInfo!) {
+        let viewController = window!.rootViewController as! ViewController
+        viewController.startGame()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
