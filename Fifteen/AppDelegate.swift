@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SkillzDelegate {
         Skillz.skillzInstance().initWithGameId("4651", for: self, with: SkillzEnvironment.sandbox, allowExit: false)
         window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = ViewController()
-        viewController.view.backgroundColor = UIColor.white
         window!.rootViewController = viewController
         window!.makeKeyAndVisible();
 
