@@ -11,12 +11,14 @@ import SpriteKit
 
 class ViewController: UIViewController {
 
+    var fadeOut : UIView?
     override func loadView() {
         self.view = SKView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .yellow
         Skillz.skillzInstance().launch();
     }
 
@@ -37,13 +39,17 @@ class ViewController: UIViewController {
     }
 
     func endGame(finalScore: Int) {
-        let fadeOut = UIView(frame: self.view.frame)
-        fadeOut.backgroundColor = .blue
-        fadeOut.alpha = 0
-        self.view.addSubview(fadeOut)
-        UIView.animate(withDuration: 1, animations: {() in fadeOut.alpha = 1}, completion: {(_) in
-            Skillz.skillzInstance().displayTournamentResults(withScore: NSNumber(integerLiteral:finalScore), withCompletion: {() in })})
-
+        self.fadeOut = UIView(frame: self.view.frame)
+        self.fadeOut!.backgroundColor = .blue
+        self.fadeOut!.alpha = 0
+        self.view.addSubview(fadeOut!)
+        UIView.animate(withDuration: 1, animations: {[unowned self] () in self.fadeOut!.alpha = 1}, completion: {[unowned self] (_) in
+            Skillz.skillzInstance().displayTournamentResults(withScore: NSNumber(integerLiteral:finalScore), withCompletion: { () in })
+            let skView = self.view as! SKView
+            skView.presentScene(nil)
+            self.fadeOut!.removeFromSuperview()
+            self.fadeOut = nil
+        })
     }
 }
 
