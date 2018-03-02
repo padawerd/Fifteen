@@ -26,8 +26,6 @@ class ViewController: UIViewController {
         let scene = GameScene(size: CGSize(width: 100, height: 150))
         scene.endGame = {[weak self] (finalScore: Int) in self?.endGame(finalScore: finalScore)}
         let skView = view as! SKView
-        skView.showsFPS = true
-        skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
         scene.scaleMode = .aspectFit
         skView.presentScene(scene)
